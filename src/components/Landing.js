@@ -44,7 +44,9 @@ const Landing = () => {
       console.log("ctrlPress", ctrlPress);
       handleCompile();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ctrlPress, enterPress]);
+
   const onChange = (action, data) => {
     switch (action) {
       case "code": {
@@ -54,7 +56,9 @@ const Landing = () => {
       default: {
         console.warn("case not handled!", action, data);
       }
+
     }
+
   };
   const handleCompile = () => {
     setProcessing(true);
